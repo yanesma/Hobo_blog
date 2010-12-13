@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
-    title :string
+    title :string, :required
     content :textile
     timestamps
   end

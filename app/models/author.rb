@@ -3,7 +3,7 @@ class Author < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
-    name :string
+    name :string, :required, :unique, :null=>false, :index=>true
     timestamps
   end
 
