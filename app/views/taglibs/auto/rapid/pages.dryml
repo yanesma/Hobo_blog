@@ -218,7 +218,7 @@
 
           <section param="content-body">
             <view:content param="description"/>
-            <field-list fields="author" param/>
+            <field-list fields="post_date, author" param/>
           </section>
     </content:>
 

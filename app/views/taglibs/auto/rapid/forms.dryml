@@ -15,7 +15,7 @@
 <def tag="form" for="Post">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="title, content, author" param/>
+    <field-list fields="post_date, title, content, author" param/>
     <div param="actions">
       <submit label="#{ht 'posts.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>
