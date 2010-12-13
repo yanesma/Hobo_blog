@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101213113352) do
+ActiveRecord::Schema.define(:version => 20101213115458) do
 
   create_table "authors", :force => true do |t|
     t.string   "name",       :null => false
@@ -24,7 +24,11 @@ ActiveRecord::Schema.define(:version => 20101213113352) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "author_id"
+    t.date     "post_date"
   end
+
+  add_index "posts", ["author_id"], :name => "index_posts_on_author_id"
 
   create_table "users", :force => true do |t|
     t.string   "crypted_password",          :limit => 40

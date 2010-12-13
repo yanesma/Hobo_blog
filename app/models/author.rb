@@ -7,7 +7,7 @@ class Author < ActiveRecord::Base
     timestamps
   end
 
-
+  has_many :posts
   # --- Permissions --- #
 
   def create_permitted?

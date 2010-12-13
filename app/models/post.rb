@@ -3,12 +3,13 @@ class Post < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
+    post_date :date
     title :string, :required
     content :textile
     timestamps
   end
 
-
+  belongs_to :author 
   # --- Permissions --- #
 
   def create_permitted?
