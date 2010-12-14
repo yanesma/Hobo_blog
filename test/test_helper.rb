@@ -41,7 +41,7 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 
-lass << self
+class << self
     def could do_sth
       puts "Could #{do_sth}"
     end
@@ -86,3 +86,4 @@ module Rack
   end
 end
 
+end

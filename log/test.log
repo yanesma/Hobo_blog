@@ -1,0 +1,37 @@
+  [4;36;1mSQL (4.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (6.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mAuthor Delete all (3.5ms)[0m   [0mDELETE FROM "authors" WHERE 1=1[0m
+  [4;36;1mPost Delete all (0.2ms)[0m   [0;1mDELETE FROM "posts" WHERE 1=1[0m
+  [4;35;1mUser Delete all (0.2ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mAuthor Delete all (0.3ms)[0m   [0mDELETE FROM "authors" WHERE 1=1[0m
+  [4;36;1mPost Delete all (0.3ms)[0m   [0;1mDELETE FROM "posts" WHERE 1=1[0m
+  [4;35;1mUser Delete all (0.2ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mAuthor Delete all (0.2ms)[0m   [0mDELETE FROM "authors" WHERE 1=1[0m
+  [4;36;1mPost Delete all (0.2ms)[0m   [0;1mDELETE FROM "posts" WHERE 1=1[0m
+  [4;35;1mUser Delete all (1.6ms)[0m   [0mDELETE FROM "users" WHERE 1=1[0m
