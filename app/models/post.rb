@@ -13,6 +13,9 @@ class Post < ActiveRecord::Base
   # --- Permissions --- #
 
   def create_permitted?
+     puts "create_permitted? #{acting_user.administrator?}"
+    debugger #THIS IS THE LINE TO ADD TO INVOKE DEBUGGE
+
     acting_user.signed_up?
   end
 
