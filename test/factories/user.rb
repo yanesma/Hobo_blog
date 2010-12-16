@@ -1,9 +1,9 @@
 require 'factory_girl'
  
 Factory.define :admin, :class=> User do |u|
-  u.sequence(:name ){|n| "admin#{n}"}
-  u.sequence(:email_address ){|n| "admin#{n}@test.com"}
-  u.password 'pass'
+  u.sequence(:name ){|n| "admin"}
+  u.sequence(:email_address ){|n| "admin@admin.com"}
+  u.password 'admin'
   u.administrator true
 end
  
