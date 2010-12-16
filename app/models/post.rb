@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
 
   fields do
     post_date :date
-    title :string, :required
+    title :string , :required
     content :textile
     timestamps
   end

@@ -3,12 +3,16 @@ class Author < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
-    name :string, :required, :unique, :null=>false, :index=>true
+    name :string , :required
     timestamps
   end
-
+ 
   has_many :posts
+
+ # validate_uniqueness_of :name
+  
   # --- Permissions --- #
+
 
   def create_permitted?
     acting_user.signed_up?
