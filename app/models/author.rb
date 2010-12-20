@@ -6,14 +6,13 @@ class Author < ActiveRecord::Base
     name :string , :required
     timestamps
   end
- 
+  
+  #
   has_many :posts
 
- # validate_uniqueness_of :name
+ validate_uniqueness_of :name
   
   # --- Permissions --- #
-
-
   def create_permitted?
     acting_user.signed_up?
   end
