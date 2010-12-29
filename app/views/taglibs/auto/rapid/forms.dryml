@@ -3,7 +3,7 @@
 <def tag="form" for="Author">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="name" param/>
+    <field-list fields="name, user" param/>
     <div param="actions">
       <submit label="#{ht 'authors.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>

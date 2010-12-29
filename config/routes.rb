@@ -1,11 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
 
   map.site_search  'search', :controller => 'front', :action => 'search'
-  map.root :controller => 'front', :action => 'index'
+  map.root :controller => 'posts', :action => 'index'
 
   Hobo.add_routes(map)
 
-  # The priority is based upon order of creation: first created -> highest priority.
+  # The priority is p upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
@@ -16,7 +16,7 @@ ActionController::Routing::Routes.draw do |map|
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   map.resources :products
+   #map.resources :posts
 
   # Sample resource route with options:
   #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }

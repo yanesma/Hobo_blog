@@ -9,8 +9,9 @@ class Post < ActiveRecord::Base
     timestamps
   end
 
-  belongs_to :author 
+  belongs_to :author , :creator => true
   # --- Permissions --- #
+  set_default_order "post_date DESC"
 
   def create_permitted?
      puts "create_permitted? #{acting_user.administrator?}"
@@ -20,7 +21,7 @@ class Post < ActiveRecord::Base
   end
 
   def update_permitted?
-    acting_user.signed_up?
+    acting_user.administrator? || self.author ==  acting_user.author
   end
 
   def destroy_permitted?

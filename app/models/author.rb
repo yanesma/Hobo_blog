@@ -9,8 +9,8 @@ class Author < ActiveRecord::Base
   
   #
   has_many :posts
-
- validate_uniqueness_of :name
+  belongs_to :user
+ #validate_uniqueness_of :name
   
   # --- Permissions --- #
   def create_permitted?

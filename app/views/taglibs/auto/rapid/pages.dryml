@@ -98,6 +98,7 @@
           </header>
 
           <section param="content-body">
+            <field-list fields="user" param/>
           </section>
     </content:>
 
@@ -209,6 +210,8 @@
 
             <record-flags fields="" param/>
 
+            <a:author param="creator-link"/>
+
             <a action="edit" if="&can_edit?" param="edit-link">
               <ht key="posts.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
                 Edit Post
@@ -218,7 +221,7 @@
 
           <section param="content-body">
             <view:content param="description"/>
-            <field-list fields="post_date, author" param/>
+            <field-list fields="post_date" param/>
           </section>
     </content:>
 

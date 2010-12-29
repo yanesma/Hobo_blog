@@ -5,7 +5,6 @@ class PostTest < ActiveSupport::TestCase
   context "a Post" do
     setup do
       @post = Factory(:post)
-      
     end
 
     should "respond to #{:title}" do
