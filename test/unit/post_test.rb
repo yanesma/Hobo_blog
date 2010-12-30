@@ -34,6 +34,12 @@ class PostTest < ActiveSupport::TestCase
         assert_not_nil @post.post_date
     end
 
+    should "have author" do
+        assert_not_nil @post.author
+    end
+
+
+
   end
 
 end
