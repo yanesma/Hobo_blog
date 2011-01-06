@@ -18,12 +18,9 @@ class Post < ActiveRecord::Base
   end
 
   def update_permitted?
-    if(acting_user.guest?)
-      false
-      else if
-          acting_user.administrator? || self.author ==  acting_user.author
-      end
-   end
+    if(!acting_user.guest?)
+           acting_user.administrator? || self.author ==  acting_user.author
+    end
     
   end
 
