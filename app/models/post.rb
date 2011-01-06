@@ -11,17 +11,20 @@ class Post < ActiveRecord::Base
 
   belongs_to :author , :creator => true
   # --- Permissions --- #
-  set_default_order "post_date DESC"
+  set_default_order "updated_at DESC"
 
   def create_permitted?
-     puts "create_permitted? #{acting_user.administrator?}"
-    debugger #THIS IS THE LINE TO ADD TO INVOKE DEBUGGE
-
     acting_user.signed_up?
   end
 
   def update_permitted?
-    acting_user.administrator? || self.author ==  acting_user.author
+    if(acting_user.guest?)
+      false
+      else if
+          acting_user.administrator? || self.author ==  acting_user.author
+      end
+   end
+    
   end
 
   def destroy_permitted?

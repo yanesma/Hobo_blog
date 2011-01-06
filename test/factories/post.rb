@@ -7,3 +7,5 @@ Factory.define :post do |p|
   
   p.association :author
 end
+
+

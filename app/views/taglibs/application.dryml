@@ -7,3 +7,16 @@
 <set-theme name="clean"/>
 
 <def tag="app-name">Blog</def>
+
+<extend tag="card" for="Post">
+
+  <old-card merge>
+    <append-body:>
+    <div class="updated_at">
+      <field-list fields="updated_at" param/>
+     </div>
+    </append-body:>
+  </old-card>
+
+</extend>
+
